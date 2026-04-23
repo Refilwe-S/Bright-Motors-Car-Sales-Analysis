@@ -64,7 +64,7 @@ Expand into additional regions
 
 
 **Project Structure**
-**├── SQL/
+├── SQL/
 │   └── bright_motors_analysis.sql
 ├── Dashboard/
 │   └── dashboard.pbix / excel.xlsx
