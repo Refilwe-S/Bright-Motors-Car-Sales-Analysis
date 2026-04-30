@@ -1,86 +1,243 @@
-# Bright-Motors-Car-Sales-Analysis
+#   Bright Motors Car Sales Analysis
 
-**Project Overview**
+##  Business Problem
 
-This project focuses on analyzing car sales data for Bright Motors to uncover key business insights, improve decision-making, and identify opportunities for growth.
+Bright Motors needs better visibility into its **sales performance, profitability, and customer preferences** to:
 
-The analysis includes data cleaning, transformation, and aggregation using SQL, followed by visualization through a dashboard.
+* Maximize revenue
+* Improve pricing strategy
+* Identify high-performing vehicles
+* Reduce losses
 
-**Objectives**
+This project uses data to uncover **actionable insights that support business growth and decision-making**.
 
-Clean and prepare raw sales data
-Handle missing and inconsistent values
-Remove exact duplicate records
-Analyze sales performance and profitability
-Identify trends and customer preferences
-Provide data-driven business recommendations
+---
 
-**Tools & Technologies**
-Databricks (SQL)
-Power BI / Excel (Dashboard)
-GitHub
-Lovable Live Dashboard
+##  Project Objective
 
-**Data Cleaning & Preparation**
+To clean, analyze, and visualize car sales data in order to:
 
-The raw dataset was processed to ensure data quality:
+* Improve data quality and consistency
+* Identify trends and profitability drivers
+* Understand customer preferences
+* Support data-driven business decisions
 
-NULL values handled using COALESCE
-Invalid values (e.g. 'â€”') standardized
-Sale date converted into usable date format
-Exact duplicate records removed using ROW_NUMBER()
-New calculated fields created (profit, profit margin, performance tier)
+---
 
-**Key Analysis**
+##  Dataset Overview
 
-The following analyses were performed:
+The dataset contains car sales transactions including:
 
-Sales trends by month and year
-Revenue by make, model, and body type
-Profitability analysis (profit & margin)
-Customer preferences (SUV vs Sedan, transmission types)
-Mileage vs pricing insights
+* Vehicle make & model
+* Body type (SUV, Sedan, etc.)
+* Transmission type
+* Selling price
+* MMR (market value)
+* Mileage
+* Sale date
 
-**Key Metrics**
+---
 
-Units Sold = Count of transactions
-Total Revenue = Sum of selling price
-Total Profit = Selling price − MMR
-Profit Margin (%)
-Average Price & Mileage
+##  Tools & Technologies
 
-**Insights**
-High-end vehicles generate the most revenue
-Some vehicles are sold below market value (MMR)
-SUVs and Sedans dominate sales
-Lower mileage vehicles tend to sell at higher prices
+* Databricks (SQL) – Data cleaning & analysis
+* Excel / – Dashboard creation
+* Looker Studio – Reporting dashboards
+* Lovable – Interactive dashboard
+* GitHub – Documentation
 
-**Recommendations**
+---
 
-Focus on high-margin vehicles
-Improve pricing strategy to avoid losses
-Increase inventory for high-demand vehicle types
-Expand into additional regions
+##  Data Cleaning & Preparation
 
+The dataset was cleaned and transformed using SQL:
 
-**Project Structure**
+* Handled NULL values using `COALESCE`
+* Standardized invalid characters (e.g. 'â€”')
+* Converted sale dates into proper format
+* Removed duplicate records using `ROW_NUMBER()`
+* Created calculated fields:
+
+  * Profit
+  * Profit Margin
+  * Performance Tier
+
+---
+
+##  Project Planning
+
+###  Workflow (Miro Flowchart)
+
+ [View Miro Flowchart](./2.%20Project%20Planning/Miro%20Flowchart.pdf)
+
+###  Project Timeline (Gantt Chart)
+
+ [View Gantt Chart](./2.%20Project%20Planning/Gantt%20Chart.png)
+
+---
+
+##  Dashboards
+
+### Dashboard Screenshot
+
+![Dashboard](./Dashboard/dashboard.png)
+
+---
+
+##  Live Dashboards
+
+### Bright Motors (Lovable Dashboard)
+
+ https://bright-motor-sales-report.lovable.app
+
+---
+
+### Bright Motors (Looker Studio – Dashboard)
+
+https://datastudio.google.com/s/vOYaybAPY1k
+
+---
+
+ **Note:**
+
+* Lovable dashboard provides an **interactive web-based experience**
+* Looker Studio dashboards provide **detailed analytical reporting**
+
+---
+
+## Key Analysis
+
+### Sales Trends
+
+* Monthly and yearly performance analysis
+* Revenue growth patterns
+
+###  Product Performance
+
+* Revenue by make, model, and body type
+* Identification of top-performing vehicles
+
+###  Profitability Analysis
+
+* Total profit and margin evaluation
+* Identification of loss-making sales
+
+### Customer Preferences
+
+* Popular body types (SUV vs Sedan)
+* Transmission trends
+
+### Pricing & Mileage Insights
+
+* Lower mileage vehicles tend to sell at higher prices
+* Pricing significantly influences demand
+
+---
+
+## Key Metrics
+
+* Units Sold (transaction count)
+* Total Revenue
+* Total Profit
+* Profit Margin (%)
+* Average Price & Mileage
+
+---
+
+## Key Insights
+
+*  High-end vehicles generate the most revenue
+*  Some vehicles are sold below market value (MMR)
+*  SUVs and Sedans dominate sales
+*  Lower mileage vehicles command higher prices
+
+---
+
+## Business Recommendations
+
+## Improve Profitability
+
+* Focus on high-margin vehicles
+* Avoid underpricing below MMR
+
+## Optimize Inventory
+
+* Increase stock for high-demand vehicles
+* Reduce low-performing inventory
+
+## Pricing Strategy
+
+* Align pricing with market value
+* Continuously monitor pricing trends
+
+## Growth Opportunities
+
+* Expand into high-performing regions
+* Use data insights to guide expansion
+
+---
+
+## How to Run
+
+```sql
+-- Example: Remove duplicates
+SELECT *
+FROM (
+    SELECT *,
+           ROW_NUMBER() OVER (PARTITION BY vehicle_id ORDER BY sale_date) AS rn
+    FROM sales_data
+) t
+WHERE rn = 1;
+```
+
+Run queries in **Databricks SQL** to reproduce the analysis.
+
+---
+
+## Project Structure
+
+Bright-Motors-Car-Sales-Analysis
 ├── SQL/
 │   └── bright_motors_analysis.sql
 ├── Dashboard/
-│   └── dashboard.pbix / excel.xlsx
+│   ├── dashboard.pbix / excel.xlsx
+│   └── dashboard.png
+├── 2. Project Planning/
+│   ├── Gantt Chart.png
+│   └── Miro Flowchart.pdf
 ├── README.md
 
-**Output**
+---
 
-**Cleaned dataset**
-SQL analysis queries
-Interactive dashboard
-Business insights & recommendations
+## Project Output
 
-**Conclusion**
+* Cleaned dataset
+* SQL queries
+* Interactive dashboards
+* Business insights & recommendations
 
-This project demonstrates how raw data can be transformed into meaningful insights that support business decision-making through structured data analysis and visualization.
+---
 
+## Author
 
-Author: Refilwe Sebako
-Role: Data Analyst / Virtual Assistant
+**Refilwe Sebako**
+Certified Virtual Assistant | Executive Assistant | 10+ Years Admin & Operations Experience | Customer Service | E-commerce | Data Analyst
+
+LinkedIn: https://www.linkedin.com/in/resebako
+
+---
+
+## Portfolio Value
+
+This project demonstrates:
+
+* SQL data cleaning and transformation
+* Business-focused analysis
+* Dashboard development
+* Translating data into actionable insights
+
+---
+
+## Conclusion
+
+This project shows how raw car sales data can be transformed into **meaningful insights that drive smarter business decisions and improve performance**.
