@@ -215,6 +215,7 @@ Run queries in **Databricks SQL** to reproduce the analysis.
 ## Author
 
 **Refilwe Sebako**
+
 Certified Virtual Assistant | Executive Assistant | 10+ Years Admin & Operations Experience | Customer Service | E-commerce | Data Analyst
 
 LinkedIn: https://www.linkedin.com/in/resebako
