@@ -189,12 +189,13 @@ Run queries in **Databricks SQL** to reproduce the analysis.
 ## Project Structure
 
  Bright-Motors-Car-Sales-Analysis
+ 
 ├── SQL/
 │ └── bright_motors_analysis.sql
 ├── Dashboard/
 │ ├── dashboard.pbix / excel.xlsx
 │ └── dashboard.png
-├── 2. Project Planning/
+├──   Project Planning/
 │ ├── Gantt Chart.png
 │ └── Miro Flowchart.pdf
 ├── README.md
