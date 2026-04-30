@@ -188,17 +188,30 @@ Run queries in **Databricks SQL** to reproduce the analysis.
 
 ## Project Structure
 
- Bright-Motors-Car-Sales-Analysis
- 
-├── SQL/
-│ └── bright_motors_analysis.sql
-├── Dashboard/
-│ ├── dashboard.pbix / excel.xlsx
-│ └── dashboard.png
-├──   Project Planning/
-│ ├── Gantt Chart.png
-│ └── Miro Flowchart.pdf
-├── README.md
+```
+  Bright-Motors-Car-Sales-Analysis
+│
+├── 1. Project Description & Raw Data
+│   └── Raw Data
+│   └─  Project Description
+├── 2. Project Planning
+│   ├── Miro Flowchart.pdf
+│   └── Gantt Chart.png
+│
+├── 3. Data Processing
+│   ├── SQL/
+│   │   └── bright_motors_analysis.sql
+│   └── Excel/
+│       └── analysis.xlsx
+│
+├── 4. Project Presentation
+│   ├── Dashboard/
+│   │   ├── dashboard.png
+│   │   └── dashboard 
+│  
+│
+└── README.md
+```
 
 
 
