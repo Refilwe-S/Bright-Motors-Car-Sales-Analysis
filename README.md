@@ -76,14 +76,6 @@ The dataset was cleaned and transformed using SQL:
 
 ---
 
-##  Dashboards
-
-### Dashboard Screenshot
-
-![Dashboard](./Dashboard/dashboard.png)
-
----
-
 ##  Live Dashboards
 
 ### Bright Motors (Lovable Dashboard)
